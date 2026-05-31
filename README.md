@@ -53,6 +53,7 @@ final zakki = ZakkiStore(
   "API_TOKEN_MEMBER_ANDA",
   baseUrl: "https://qris.zakki.store", // Domain custom/resmi
   iduser: "IBO99",
+  email: "member@gmail.com",
   pin: "123456",                       // Wajib untuk tabung & tarik
   isAutoWithdraw: true,                // Aktifkan auto-withdrawal saldo bank!
 );
