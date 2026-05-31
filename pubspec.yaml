@@ -1,0 +1,11 @@
+name: zakkistore_sdk
+description: Official Flutter/Dart SDK Client Library for Zakki Store B2B API Gateway.
+version: 1.0.0
+homepage: https://github.com/MrLow12/zakkistore-sdk-flutter
+repository: https://github.com/MrLow12/zakkistore-sdk-flutter
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+
+dependencies:
+  http: ^0.13.0
