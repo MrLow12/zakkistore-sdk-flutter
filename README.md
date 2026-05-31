@@ -8,19 +8,17 @@ Pustaka Flutter & Dart resmi untuk memudahkan integrasi layanan Host-to-Host (H2
 
 ## 🚀 Instalasi & Inisialisasi
 
-Instal pustaka dengan menambahkannya di berkas `pubspec.yaml` proyek Flutter Anda:
-
-```yaml
-dependencies:
-  zakkistore_sdk:
-    git:
-      url: https://github.com/MrLow12/zakkistore-sdk-flutter.git
-```
-
-Atau setelah terbit di pub.dev:
+Instal pustaka via `pub.dev` ke dalam proyek Flutter Anda:
 
 ```bash
 flutter pub add zakkistore_sdk
+```
+
+Atau tambahkan secara manual ke berkas `pubspec.yaml` proyek Anda:
+
+```yaml
+dependencies:
+  zakkistore_sdk: ^1.0.1
 ```
 
 ### Inisialisasi Klien

@@ -1,3 +1,7 @@
+## 1.0.1
+
+* Update README documentation for official pub.dev release.
+
 ## 1.0.0
 
 * Initial release of `zakkistore_sdk`.
