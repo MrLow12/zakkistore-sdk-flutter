@@ -1,0 +1,10 @@
+## 1.0.0
+
+* Initial release of `zakkistore_sdk`.
+* Support for QRIS Payment Gateway (Top Up, Status Check, Cancel Transaksi).
+* Support for H2H Prepaid & Postpaid transactions.
+* Support for Bank Virtual Account checking, transferring, and Mutasi.
+* Support for Auto-Withdraw bank VA balance.
+* Support for Noktel Virtual OTP marketplace.
+* Support for Mining & Gacha reward check.
+* Support for Whitelist IP setting and Leaderboard status.
