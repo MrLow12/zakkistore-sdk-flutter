@@ -287,15 +287,38 @@ class ZakkiStore {
   // --- 5. REWARD KOMPUTASI & GAME ---
   // ==========================================================
 
-  Future<Map<String, dynamic>> cekmining() async {
+  Future<Map<String, dynamic>> cekmining(String idmining) async {
+    if (idmining.isEmpty) {
+      throw Exception('Parameter idmining wajib diisi.');
+    }
     return _request('/cekmining', 'GET', data: {
-      'token': token,
+      'idmining': idmining.trim(),
     });
   }
 
   Future<Map<String, dynamic>> mymining() async {
     return _request('/mymining', 'GET', data: {
       'token': token,
+    });
+  }
+
+  Future<Map<String, dynamic>> miningStart() async {
+    return _request('/mining/start', 'GET', data: {
+      'token': token,
+    });
+  }
+
+  Future<Map<String, dynamic>> miningSubmit(dynamic nonce, String signature) async {
+    if (nonce == null) {
+      throw Exception('Parameter nonce wajib disertakan.');
+    }
+    if (signature.isEmpty) {
+      throw Exception('Parameter signature wajib disertakan.');
+    }
+    return _request('/mining/submit', 'POST', data: {
+      'token': token,
+      'nonce': nonce,
+      'signature': signature,
     });
   }
 
@@ -332,5 +355,64 @@ class ZakkiStore {
 
   Future<Map<String, dynamic>> status() async {
     return _request('/status', 'GET');
+  }
+
+  // ==========================================================
+  // --- 7. METODE INTEGRASI BARU ---
+  // ==========================================================
+
+  Future<Map<String, dynamic>> setcallback(String site) async {
+    return _request('/setcallback', 'GET', data: {
+      'token': token,
+      'site': site.trim(),
+    });
+  }
+
+  Future<Map<String, dynamic>> delcallback() async {
+    return _request('/delcallback', 'GET', data: {
+      'token': token,
+    });
+  }
+
+  Future<Map<String, dynamic>> setnotifbot(dynamic telegramId) async {
+    return _request('/setnotifbot', 'GET', data: {
+      'token': token,
+      'id': telegramId.toString().trim(),
+    });
+  }
+
+  Future<Map<String, dynamic>> delnotifbot() async {
+    return _request('/delnotifbot', 'GET', data: {
+      'token': token,
+    });
+  }
+
+  Future<Map<String, dynamic>> checktransfer(String idtransfer) async {
+    return _request('/checktransfer', 'GET', data: {
+      'idtransfer': idtransfer.trim(),
+    });
+  }
+
+  Future<Map<String, dynamic>> mytransfer({String type = 'all'}) async {
+    return _request('/mytransfer', 'GET', data: {
+      'token': token,
+      'type': type.trim(),
+    });
+  }
+
+  Future<Map<String, dynamic>> mytopup() async {
+    return _request('/mytopup', 'GET', data: {
+      'token': token,
+    });
+  }
+
+  Future<Map<String, dynamic>> cekmyip() async {
+    return _request('/cekmyip', 'GET');
+  }
+
+  Future<Map<String, dynamic>> cekip(String ip) async {
+    return _request('/cekip', 'GET', data: {
+      'ip': ip.trim(),
+    });
   }
 }
