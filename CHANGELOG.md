@@ -1,3 +1,9 @@
+## 1.0.4
+
+* Integrate `mytransfer()` and `checktransfer()` banking endpoints.
+* Restructure documentation and categorize the 36 functions.
+* Completely clean BukaOlshop branding and align with Zakki Store.
+
 ## 1.0.1
 
 * Update README documentation for official pub.dev release.
