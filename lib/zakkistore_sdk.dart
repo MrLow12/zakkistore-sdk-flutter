@@ -100,6 +100,11 @@ class ZakkiStore {
     });
   }
 
+  String cektopup2(String idtopup) {
+    final cleanUrl = baseUrl.replaceAll(RegExp(r'/$'), '');
+    return '$cleanUrl/cektopup2?idtopup=${Uri.encodeComponent(idtopup)}';
+  }
+
   Future<Map<String, dynamic>> cancel(String? idTransaksi, {bool allPending = false}) async {
     final data = <String, dynamic>{'token': token};
     if (idTransaksi != null) data['id_transaksi'] = idTransaksi;
