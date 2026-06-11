@@ -1,3 +1,7 @@
+## 1.0.5
+
+* Add `cektopup2` method to retrieve the direct image receipt URL of topup.
+
 ## 1.0.4
 
 * Integrate `mytransfer()` and `checktransfer()` banking endpoints.
